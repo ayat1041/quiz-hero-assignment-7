@@ -48,8 +48,8 @@
         </div>
         <button
           class="bg-yellow-400 font-semibold text-sm px-5 py-1 rounded text-black"
-        id="return_home" onclick="window.history.go(-1); return false;">
-          Return to Home
+        id="return_home" onclick="window.history.go(-1); return fals8;">
+          Home
         </button>
       </nav>
     </header>
@@ -58,22 +58,31 @@
     class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto mt-10"
     id="rulesContainer">
     <ul>
-        <li class="mb-5"><p class="font-semibold"><span class="text-xl text-green-600 font-bold">Q.1. </span>Write the difference between map, filter, find & forEach.</p>
-            <p><span class="text-xl text-green-600 font-bold">Answer : </span>Dont know yet.</p>
+        <li class="mb-5"><p class="mb-8 font-semibold text-2xl"><span class="text-xl text-green-600 font-bold">Q.1. </span>Write the difference between map, filter, find & forEach.</p>
+            <p><span class="text-xl text-green-800 font-bold">Answer : </span><b>Map</b> takes an array and returns an array by default. <br><br> In similar case when <b>ForEach</b> takes an array it returns undefined by default.<br><br><b>filter</b> checks the given condition and returns an array of all the matched objects.<br><br><b>Find</b> does the same task as filter, but unlike filter it returns the first matched object.</p>
         </li>
-        <li class="mb-5"><p class="font-semibold"><span class="text-xl text-green-600 font-bold">Q.2. </span>Write the difference between localStorage, sessionStorage & Cookies.</p>
-            <p><span class="text-xl text-green-600 font-bold">Answer : </span>Dont know yet.</p>
+        <li class="mb-5"><p class="mb-8 font-semibold text-2xl"><span class="text-xl text-green-600 font-bold">Q.2. </span>Write the difference between localStorage, sessionStorage & Cookies.</p>
+            <p><span class="text-xl text-green-800 font-bold">Answer : </span>
+            <b>localStorage</b> Doesnt deletes saved data even if the pc/browser is closed.<br><br>
+            <b>sessionStorage</b> deletes the data once the current tab is closed.<br><br>
+            <b>Cookies</b> can carry a expiration date.
+            </p>
         </li>
-        <li class="mb-5"><p class="font-semibold"><span class="text-xl text-green-600 font-bold">Q.3. </span>What is Eventloop? How does it work?</p>
-            <p><span class="text-xl text-green-600 font-bold">Answer : </span>Dont know yet.</p>
+        <li class="mb-5"><p class="mb-8 font-semibold text-2xl"><span class="text-xl text-green-600 font-bold">Q.3. </span>What is Eventloop? How does it work?</p>
+            <p><span class="text-xl text-green-800 font-bold">Answer : </span>As Javascript is synchronous, Event loop allows Js to run asynchronously. So when from a set of called functions, suppose the middle one has setTimeOut set to 4 seconds. So the function with setTimeOut will be executed at last. As the first normal statement enters the callstack and executes immediately. Then suppose the setTimeOut function is the second one. As its a asynchronous function, it get pushed into the event table and then into the event queue after a certain time. In the mean time all the normal statements gets executed. lastly setTimeOut function moves to callStack and gets executed.</p>
         </li>
-        <li class="mb-5"><p class="font-semibold"><span class="text-xl text-green-600 font-bold">Q.4. </span>Explain Our quizTimer() function.</p>
-            <p><span class="text-xl text-green-600 font-bold">Answer : </span>Dont know yet.</p>
+        <li class="mb-5"><p class="mb-8 font-semibold text-2xl"><span class="text-xl text-green-600 font-bold">Q.4. </span>Explain Our quizTimer() function.</p>
+            <p><span class="text-xl text-green-800 font-bold">Answer : </span><b>quizTimer</b> takes a parameter dismiss, if its true then the timer clears. Else,it takes setInterval function to timer variable, where it takes the #count from html doc in countHTML variable. then it converts the time in Minutes and seconds. and set min and countSec to its named variables. then those two gets set into #count element.<br> When the time crosses 60 seconds mark, the even time value gets text-red-700 and odd values get text-red-300. Thus having a blinking effect.</p>
         </li>
-        <li class="mb-5"><p class="font-semibold"><span class="text-xl text-green-600 font-bold">Q.5. </span>Explain Our chooseQuiz() function..</p>
-            <p><span class="text-xl text-green-600 font-bold">Answer : </span>Dont know yet.</p>
+        <li class="mb-5"><p class="mb-8 font-semibold text-2xl"><span class="text-xl text-green-600 font-bold">Q.5. </span>Explain Our chooseQuiz() function..</p>
+            <p><span class="text-xl text-green-800 font-bold">Answer : </span><b>chooseQuiz</b> function takes two parameters index and givenAns, index refers to the id of questions (0-5), givenAns refers to the four options each questions has. isExist makes sure the "index"ed question is selected. the for loop checks wether any option of each question has been selected in this session, if the option has changed it updates the newly selected option. Ultimately answer array fills with all 6 selected answers, and correct answer, id & description. then passed into the displayAnswers function for further process.</p>
         </li>
     </ul>
     </section>
+        <!-- Footer section start -->
+        <footer class="py-10 text-center text-sm">
+            Copyright © 2023 Quiz Hero All Rights Reserved.
+          </footer>
+          <!-- Footer section end -->
     </body>
 </html>
