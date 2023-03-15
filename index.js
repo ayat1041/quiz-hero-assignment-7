@@ -114,10 +114,7 @@ document.querySelector("#submit").addEventListener("click", () => {
   // data setting on local storage and getting data from local storage
   let storage = JSON.parse(localStorage.getItem("result"));
   if (storage) {
-    localStorage.setItem(
-      "results",
-      JSON.stringify([
-        ...storage,
+    localStorage.setItem("results",JSON.stringify([...storage,
         {
           marks: totalMark,
           examTime: timeTaken.innerText,
@@ -167,18 +164,12 @@ document.querySelector("#submit").addEventListener("click", () => {
     <div>Grade</div>
     <div>Time</div>
     </div>
-    ${storage
-      ?.reverse()
-      ?.map(
-        (item) => `<div
-      class="flex justify-between items-center border rounded p-2 my-2 shadow-sm">
+    ${storage?.reverse()?.map((item) => 
+      `<div class="flex justify-between items-center border rounded p-2 my-2 shadow-sm">
       <div>${item.marks}/60</div>
       <div>${item.status}</div>
       <div>${item.examTime}</div>
-      </div>`
-      )
-      ?.join("")}`
-      : ""
+      </div>`)?.join("")}`:""
   }
   </div>
   `;
